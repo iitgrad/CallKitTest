@@ -20,6 +20,7 @@ struct CallKitTestApp: App {
 }
 
 class AppDelegate: NSObject, UIApplicationDelegate {
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         CloudKitSupport.initializeContainer(name: "iCloud.com.mayo.arti.EHealthMobile")
         application.registerForRemoteNotifications()
@@ -30,7 +31,6 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         if let notification = CKNotification(fromRemoteNotificationDictionary: userInfo) {
             print("CloudKit database changed \(notification.subscriptionID ?? "None provided")")
             print(userInfo.description)
-
             NotificationCenter.default.post(name: NSNotification.Name.CKAccountChanged, object: nil)
             completionHandler(.newData)
         }

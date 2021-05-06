@@ -13,6 +13,7 @@
 		19BBE37A264408FB001AB29A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19BBE379264408FB001AB29A /* Preview Assets.xcassets */; };
 		19BBE38426440A9C001AB29A /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19BBE38326440A9C001AB29A /* CloudKit.framework */; };
 		19BBE38C2644202A001AB29A /* AppDevWithSwiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 19BBE38B2644202A001AB29A /* AppDevWithSwiftLibrary */; };
+		19BBE38E264424F0001AB29A /* ProviderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BBE38D264424F0001AB29A /* ProviderDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		19BBE37B264408FB001AB29A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19BBE38126440A96001AB29A /* CallKitTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CallKitTest.entitlements; sourceTree = "<group>"; };
 		19BBE38326440A9C001AB29A /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		19BBE38D264424F0001AB29A /* ProviderDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				19BBE38126440A96001AB29A /* CallKitTest.entitlements */,
 				19BBE372264408F8001AB29A /* CallKitTestApp.swift */,
 				19BBE374264408F8001AB29A /* ContentView.swift */,
+				19BBE38D264424F0001AB29A /* ProviderDelegate.swift */,
 				19BBE376264408FB001AB29A /* Assets.xcassets */,
 				19BBE37B264408FB001AB29A /* Info.plist */,
 				19BBE378264408FB001AB29A /* Preview Content */,
@@ -160,6 +163,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19BBE38E264424F0001AB29A /* ProviderDelegate.swift in Sources */,
 				19BBE375264408F8001AB29A /* ContentView.swift in Sources */,
 				19BBE373264408F8001AB29A /* CallKitTestApp.swift in Sources */,
 			);

@@ -8,17 +8,30 @@
 import SwiftUI
 import CloudKit
 import AppDevWithSwiftLibrary
+import CallKit
 
 struct ContentView: View {
+    @State var providerDelegate: ProviderDelegate?
+    
     var body: some View {
         VStack {
-            Text("Hello, world!")
-                .padding()
-            
+            Button(action: {
+                providerDelegate?.reportIncoming()
+            }, label: {
+                Text("Initiate Call")
+            }).padding()
+            Button(action: {
+                providerDelegate?.endCall()
+            }, label: {
+                Text("Cancel Call")
+            }).padding()
+
         }.onReceive(NotificationCenter.default.publisher(for: NSNotification.Name.CKAccountChanged), perform: { _ in
-            print("got notification")
+            print("CallKitTest: got notification")
+            providerDelegate?.reportIncoming()
         })
         .onAppear {
+            providerDelegate = ProviderDelegate(name: "test")
             createSubscription(recordType: "seizureAlert",
                                predicate: NSPredicate(value: true)) { _, _ in
                 ()
